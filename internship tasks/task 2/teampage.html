@@ -1,0 +1,73 @@
+<!-- 
+Assessment: Build a Responsive Team Page
+
+Task: Create a webpage showing a team of 4 people as cards, laid out responsively.
+
+What to include:
+
+* A header with a title and a navigation bar (3 links), spaced evenly across the width
+* 4 team member cards, each showing a photo, name, role, and short bio
+* One card should have a small badge (like "Lead") positioned in a corner
+* Cards should be styled with padding, borders, and background color
+* On narrow screens, the navigation links should stack instead of sitting side by side
+* The cards should sit in a row that wraps onto a new line when the screen gets smaller, and resize sensibly rather than becoming too narrow
+* Content inside each card (photo, name, role, bio) should be neatly centered and stacked
+
+Deliverable: One webpage (HTML + CSS) , a link to the site after uploading to github
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="team-title">Our Team</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Team member cards will go here -->
+         
+         <div class="team-container">
+            <div class="team-card">
+                <span class="badge">Lead</span>
+                <img src="pic3.jpeg" alt="Member 3">
+                <h2>Sara</h2>
+                <p>Role: Lead</p>
+                
+                <p>experienced lead with a strong background in team management and project coordination.</p>
+            </div>
+            <div class="team-card">
+                <span class="badge">Developer</span>
+                <img src="pic1.jpeg" alt="Member 1">
+                <h2> Kanwal</h2>
+                <p>Role: Developer</p>
+                <p>senior developer with 5 years of experience.</p>
+            </div>
+            <div class="team-card">
+                <span class="badge">Designer</span>
+                <img src="pic2.jpeg" alt="Member 2">
+                <h2>Ali</h2>
+                <p>Role: Designer</p>
+                <p>great designer with a passion for creating beautiful user interfaces.</p>
+            </div>
+            
+            <div class="team-card">
+                <img src="pic4.jpeg" alt="Member 4">
+                <h2>Fatima</h2>
+                <p>Role: Tester</p>
+                <span class="badge">Tester</span>
+                <p>detail-oriented tester with experience in both manual and automated testing.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
