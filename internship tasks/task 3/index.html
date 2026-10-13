@@ -1,0 +1,114 @@
+<!--
+Assessment: Build a Grid-Based Recipe Gallery Page
+
+Task: Create a single-page layout using CSS Grid as the main layout method for the overall page structure (not flexbox).
+
+What to include:
+
+* A header spanning the full width at the top, with a site title
+* A filter/category sidebar on one side (e.g., Breakfast, Lunch, Dinner, Desserts)
+* A main gallery area beside the sidebar, showing 6–8 recipe cards (image, title, short description)
+* A footer spanning the full width at the bottom
+* The recipe cards should be arranged in a multi-row, multi-column grid, not a single row
+* One card should be a "Recipe of the Day" that spans extra columns and/or rows compared to the others
+* On narrow screens, the sidebar should move above the gallery instead of sitting beside it, and the number of card columns should reduce
+
+Deliverable: One webpage (HTML + CSS)
+
+QnA:
+Q: How did you define your overall page layout, named grid areas, or just rows/columns by number? Why that choice?
+Q: What property did you use to make the "Recipe of the Day" card span extra space, and what would happen if you removed it?
+Q: What exactly changed in your grid at the breakpoint, and how is adjusting a grid for smaller screens different from adjusting a flexbox layout?
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Recipe Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>My Recipe Gallery</h1>
+            <p>Find your favorite food recipes!</p>
+        </header>
+
+        <aside>
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#breakfast">Breakfast</a></li>
+                <li><a href="#lunch">Lunch</a></li>
+                <li><a href="#dinner">Dinner</a></li>
+                <li><a href="#desserts">Desserts</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <h2>All Recipes</h2>
+
+            <div class="recipe-grid">
+
+                <div class="recipe featured" id="dinner">
+                    <img src="./creamypasta.jpeg" alt="Pasta">
+                    <h3>Recipe of the Day ⭐</h3>
+                    <h2>Creamy Pasta</h2>
+                    <p>Yummy pasta with creamy sauce and fresh herbs.</p>
+                </div>
+
+                <div class="recipe" id="breakfast">
+                    <img src="./avocadotoast.jpeg" alt="Toast">
+                    <h3>Avocado Toast</h3>
+                    <p>A healthy and easy breakfast.</p>
+                </div>
+
+                <div class="recipe" id="lunch">
+                    <img src="./freshsalad.jpeg" alt="Salad">
+                    <h3>Fresh Salad</h3>
+                    <p>A fresh salad with different vegetables.</p>
+                </div>
+
+                <div class="recipe">
+                    <img src="./Homemade Pizza.jpeg" alt="Pizza">
+                    <h3>Homemade Pizza</h3>
+                    <p>Pizza with cheese and tasty toppings.</p>
+                </div>
+
+                <div class="recipe" id="desserts">
+                    <img src="./Chocolate Cake.jpeg" alt="Cake">
+                    <h3>Chocolate Cake</h3>
+                    <p>A sweet chocolate dessert.</p>
+                </div>
+
+                <div class="recipe">
+                    <img src="./Healthy Bowl.jpeg" alt="Healthy bowl">
+                    <h3>Healthy Bowl</h3>
+                    <p>A healthy meal with fresh ingredients.</p>
+                </div>
+
+                <div class="recipe">
+                    <img src="./Ice Cream.jpeg" alt="Ice cream">
+                    <h3>Ice Cream</h3>
+                    <p>A cold and delicious dessert.</p>
+                </div>
+
+                <div class="recipe">
+                    <img src="./Hot Soup.jpeg" alt="Soup">
+                    <h3>Hot Soup</h3>
+                    <p>A warm bowl of homemade soup.</p>
+                </div>
+
+            </div>
+        </main>
+
+        <footer>
+            <p>My Recipe Gallery - 2026</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

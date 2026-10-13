@@ -1,0 +1,142 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: #8b4513;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: #f1dfcd;
+    padding: 20px;
+}
+
+aside ul {
+    padding-left: 20px;
+}
+
+aside li {
+    margin: 15px 0;
+}
+
+aside a {
+    color: #663300;
+    text-decoration: none;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.recipe {
+    background-color: white;
+    padding-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px #ddd;
+}
+
+.recipe img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.recipe h3,
+.recipe h2,
+.recipe p {
+    margin: 10px;
+}
+
+.recipe p {
+    color: #555;
+}
+
+/* Recipe of the day more space */
+.featured {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.featured img {
+    height: 300px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #8b4513;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* For tablets */
+@media (max-width: 800px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+    }
+
+    aside ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .recipe-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 500px) {
+    .recipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .featured img {
+        height: 200px;
+    }
+}
